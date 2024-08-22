@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { voteAnecdote , sortAnecdotes} from '../reducers/anecdoteReducer'
-import {showNotification } from '../reducers/notificationReducer'
+import {showNotification } from '../reducers/ notificationReducer'
 const AnecdoteList = () => {
   const anecdotes = useSelector(({ anecdotes, filter }) => {
     return anecdotes.filter(anecdote =>

@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { addAnecdote } from '../reducers/anecdoteReducer'
-import showNotification from '../reducers/notificationReducer'
+import { addAnecdote, showNotification } from '../reducers/anecdoteReducer'
 const AnecdoteForm = () => {
     const dispatch = useDispatch()
     const addAnecdotes = (event) => {
