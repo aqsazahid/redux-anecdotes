@@ -12,6 +12,7 @@ const anecdoteSlice = createSlice({
       state.push(action.payload)
     },
     updateAnecdote(state, action) {
+      debugger
       const id = action.payload.id
       return state.map(anecdote =>
         anecdote.id !== id ? anecdote : action.payload

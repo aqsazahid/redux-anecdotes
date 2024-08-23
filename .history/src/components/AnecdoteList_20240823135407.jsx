@@ -10,6 +10,7 @@ const AnecdoteList = () => {
   })
     const dispatch = useDispatch()
     const handleVote = (anecdote) => {
+      // dispatch(voteAnecdote(id))
       dispatch(voteAnecdote(anecdote))
       dispatch(sortAnecdotes())
       dispatch(showNotification(`You voted '${anecdote.content}'`, 5))

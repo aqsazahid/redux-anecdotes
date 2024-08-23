@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+import thunk from 'redux-thunk'
 import anecdoteReducer from './anecdoteReducer'
 import filterReducer from './filterReducer'
 import notificationReducer from './notificationReducer'
