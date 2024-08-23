@@ -9,7 +9,7 @@ const store = configureStore({
     filter: filterReducer,
     notification: notificationReducer,
   },
-  // middleware: (getDefaultMiddleware) => getDefaultMiddleware()
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 })
 
 export default store

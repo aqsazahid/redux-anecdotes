@@ -9,6 +9,12 @@ const anecdoteSlice = createSlice({
       return action.payload
     },
     addAnecdote(state, action) {
+      debugger
+      // const newAnecdote = {
+      //   id: uuidv4(),
+      //   content: action.payload,
+      //   votes: 0
+      // }
       state.push(action.payload)
     },
     voteAnecdote(state, action) {

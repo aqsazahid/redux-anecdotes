@@ -1,5 +1,7 @@
 import { createSlice} from '@reduxjs/toolkit'
+import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
+const baseUrl = 'http://localhost:3001/anecdotes'
 
 const anecdoteSlice = createSlice({
   name: 'anecdotes',
@@ -9,7 +11,12 @@ const anecdoteSlice = createSlice({
       return action.payload
     },
     addAnecdote(state, action) {
-      state.push(action.payload)
+      const newAnecdote = {
+        id: uuidv4(),
+        content: action.payload,
+        votes: 0
+      }
+      state.push(newAnecdote)
     },
     voteAnecdote(state, action) {
       const id = action.payload
